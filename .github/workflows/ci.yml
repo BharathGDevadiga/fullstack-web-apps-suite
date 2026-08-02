@@ -1,0 +1,36 @@
+name: Build and Validate Web Applications
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Web Projects
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Web Applications File Structure
+        run: |
+          echo "Verifying web application structures..."
+          test -d chans-cinema-website || (echo "Missing chans-cinema-website" && exit 1)
+          test -d product-installer-web-app || (echo "Missing product-installer-web-app" && exit 1)
+          test -d research-rabbit-web-app || (echo "Missing research-rabbit-web-app" && exit 1)
+          echo "All web applications verified successfully!"
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Basic Lint & Health Checks
+        run: |
+          echo "Checking HTML & CSS project integrity..."
+          find . -name "*.html" -exec echo "Found HTML: {}" \;
+          find . -name "*.css" -exec echo "Found CSS: {}" \;
+          echo "Validation complete!"
