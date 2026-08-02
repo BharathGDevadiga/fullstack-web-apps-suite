@@ -1,5 +1,7 @@
 # Web Applications Suite
 
+![Build Status](https://github.com/BharathGDevadiga/fullstack-web-apps-suite/actions/workflows/ci.yml/badge.svg)
+
 A collection of web applications, interactive UI components and dynamic web interfaces built with HTML, CSS and JavaScript.
 
 ---
@@ -22,4 +24,5 @@ A collection of web applications, interactive UI components and dynamic web inte
 
 ## Tech Stack
 - **Languages & Core**: HTML, CSS and JavaScript (ES6+)
+- **Automation**: GitHub Actions (CI/CD Validation)
 - **Version Control**: Git & GitHub
