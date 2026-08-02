@@ -1,6 +1,4 @@
-# Web Applications Suite
-
-![Build Status](https://github.com/BharathGDevadiga/fullstack-web-apps-suite/actions/workflows/ci.yml/badge.svg)
+## Web Applications Suite
 
 A collection of web applications, interactive UI components and dynamic web interfaces built with HTML, CSS and JavaScript.
 
